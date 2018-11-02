@@ -7,8 +7,8 @@ import android.arch.persistence.room.Query
 
 @Dao
 interface CarroDAO {
-    @Query("SELECT * FROM carro where id = :id")
-    fun getById(id: Long) : Carro?
+    @Query("SELECT * FROM carro where code = :code")
+    fun getById(code: Long) : Carro?
 
     @Query("SELECT * FROM carro")
     fun findAll(): List<Carro>

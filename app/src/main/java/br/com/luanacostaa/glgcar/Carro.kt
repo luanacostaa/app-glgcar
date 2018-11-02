@@ -10,7 +10,7 @@ import java.io.Serializable
 class Carro : Serializable {
 
     @PrimaryKey
-    var id:Long = 0
+    var code:Long = 0
     var name = ""
     var description = ""
     var imageUrl = ""

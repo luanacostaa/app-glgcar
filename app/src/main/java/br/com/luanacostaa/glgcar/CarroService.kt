@@ -33,7 +33,7 @@ object CarroService {
         }
     }
 
-    fun getCarro (context: Context, _id: String, id: Long): Carro? {
+    fun getCarro (context: Context, _id: String, code: Long): Carro? {
 
         if (AndroidUtils.isInternetDisponivel(context)) {
             val url = "$host/carro/${_id}"
@@ -43,7 +43,7 @@ object CarroService {
             return carro
         } else {
             val dao = DatabaseManager.getCarroDAO()
-            val carro = dao.getById(id)
+            val carro = dao.getById(code)
             return carro
         }
     }
@@ -65,7 +65,7 @@ object CarroService {
 
     fun existeCarro(carro: Carro): Boolean {
         val dao = DatabaseManager.getCarroDAO()
-        return dao.getById(carro.id) != null
+        return dao.getById(carro.code) != null
     }
 
     inline fun <reified T> parserJson(json: String): T {
