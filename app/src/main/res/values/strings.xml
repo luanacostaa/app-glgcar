@@ -1,3 +1,19 @@
 <resources>
-    <string name="app_name">glgcar</string>
+    <string name="app_name">GLGCar</string>
+    <string name="logo_description">Logotipo GLGCar</string>
+    <string name="email_input">Usuário</string>
+    <string name="password_input">Senha</string>
+    <string name="remind_login">Lembrar dados de acesso?</string>
+    <string name="btn_login">Entrar</string>
+
+    <string name="action_buscar">Buscar</string>
+    <string name="action_atualizar">Atualizar</string>
+    <string name="action_adicionar">Adicionar</string>
+    <string name="action_config">Configurações</string>
+    <string name="action_remover">Remover</string>
+
+    <string name="navigation_drawer_open">Open</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="title_activity_requests">RequestsActivity</string>
+    <string name="title_activity_uniform_cadastro1">UniformCadastroActivity1</string>
 </resources>

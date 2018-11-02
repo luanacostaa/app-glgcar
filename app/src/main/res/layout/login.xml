@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="20dp">
+
+        <ImageView
+            android:id="@+id/logoIndex"
+            android:layout_width="304dp"
+            android:layout_height="102dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="@string/logo_description"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/identifierLogin"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="@string/email_input"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toTopOf="@+id/passwordLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/passwordLogin"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginBottom="10dp"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="@string/password_input"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toTopOf="@+id/remindLogin"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/identifierLogin" />
+
+        <Switch
+            android:id="@+id/remindLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:checked="false"
+            android:text="@string/remind_login"
+            android:textColor="@color/colorPrimary"
+            app:layout_constraintBottom_toTopOf="@+id/progressBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordLogin" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginBottom="30dp"
+            android:background="@color/colorPrimary"
+            android:text="@string/btn_login"
+            android:textColor="@android:color/background_light"
+            android:textSize="21sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.503"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
