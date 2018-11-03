@@ -17,9 +17,9 @@ class MainActivity : DebugActivity() {
 
         val btnLogin = findViewById<Button>(R.id.btnLogin)
 
-        btnLogin.setOnClickListener(View.OnClickListener { onClickLogin() })
-
         progressBar.visibility = View.INVISIBLE
+
+        btnLogin.setOnClickListener(View.OnClickListener { onClickLogin() })
 
         // procurar pelas preferências, se pediu para lembrar os dados de acesso.
         var remind = Prefs.getBoolean("remind")
@@ -41,6 +41,8 @@ class MainActivity : DebugActivity() {
             Toast.makeText(context, "Verifique os campos de acesso em branco", Toast.LENGTH_LONG).show()
             return
         }
+
+        progressBar.visibility = View.VISIBLE
 
         // armazenar valor do checkbox
         Prefs.setBoolean("remind", remindLogin.isChecked)
@@ -64,6 +66,8 @@ class MainActivity : DebugActivity() {
 
         // enviar parâmetros simplificado
         intent.putExtra("numero", 10)
+
+        progressBar.visibility = View.INVISIBLE
 
         // Fazer chamada se o login e senha for igual ao esperado.
         startActivityForResult(intent, 1)

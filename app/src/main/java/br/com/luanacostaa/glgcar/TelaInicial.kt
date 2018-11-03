@@ -37,8 +37,8 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
         // recuperar parâmetro simplificado
         val numero = intent.getIntExtra("nome",0)
 
-        Toast.makeText(context, "Parâmetro: $nome", Toast.LENGTH_LONG).show()
-        Toast.makeText(context, "Numero: $numero", Toast.LENGTH_LONG).show()
+        //Toast.makeText(context, "Parâmetro: $nome", Toast.LENGTH_LONG).show()
+        //Toast.makeText(context, "Numero: $numero", Toast.LENGTH_LONG).show()
 
         // colocar toolbar
         var toolbar = findViewById<Toolbar>(R.id.toolbar)

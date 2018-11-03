@@ -22,6 +22,7 @@ class CarroCadastroActivity : AppCompatActivity() {
             carro.description = descriptionCarro.text.toString()
             carro.price = priceCarro.text.toString().toInt()
             carro.imageUrl = imageUrl.text.toString()
+            carro.code = numero.toLong()
 
             taskAtualizar(carro)
         }

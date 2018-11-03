@@ -42,10 +42,10 @@ class MyFirebaseMessagingService: FirebaseMessagingService() {
         // verificar se existem dados enviados no push
         if(mensagemRemota?.data.isNotEmpty()) {
             val carro_Id = mensagemRemota.data.get("carro_Id")?.toString()!!
-            val carroId = mensagemRemota.data.get("carroId")?.toLong()!!
+            val carroCode = mensagemRemota.data.get("carroCode")?.toLong()!!
             mensagem += ""
             // recuperar disciplina no WS
-            val carro = CarroService.getCarro(this, carro_Id, carroId)
+            val carro = CarroService.getCarro(this, carro_Id, carroCode)
             intent.putExtra("carro", carro)
         }
         NotificationUtil.create(this, 1, intent, titulo, mensagem)
