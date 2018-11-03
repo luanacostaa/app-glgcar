@@ -14,6 +14,7 @@ class Carro : Serializable {
     var name = ""
     var description = ""
     var imageUrl = ""
+    var price = 0
 
     override fun toString(): String {
         return "Carro(name='$name')"

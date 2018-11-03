@@ -12,7 +12,7 @@ class CarroCadastroActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cadastro_carro)
-        setTitle("Novo Carroe")
+        setTitle("Novo Carro")
 
         val numero = intent.getIntExtra("numero",0)
 
@@ -20,6 +20,7 @@ class CarroCadastroActivity : AppCompatActivity() {
             val carro = Carro()
             carro.name = nameCarro.text.toString()
             carro.description = descriptionCarro.text.toString()
+            carro.price = priceCarro.text.toString().toInt()
             carro.imageUrl = imageUrl.text.toString()
 
             taskAtualizar(carro)

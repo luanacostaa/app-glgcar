@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="URL Foto"
+        android:hint="URL da foto do carro"
         android:inputType="textPersonName" />
 
     <EditText
@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Nome"
+        android:hint="Nome do carro"
         android:inputType="textPersonName"/>
 
     <EditText
@@ -28,15 +28,15 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:ems="10"
-        android:hint="Descrição"
+        android:hint="Descrição do carro"
         android:inputType="textMultiLine" />
 
     <EditText
-        android:id="@+id/amountCarro"
+        android:id="@+id/priceCarro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Quantidade"
+        android:hint="Preço"
         android:inputType="number" />
 
     <Button

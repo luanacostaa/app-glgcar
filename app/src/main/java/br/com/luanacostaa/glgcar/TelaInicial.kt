@@ -78,7 +78,9 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
                 recyclerCarros?.adapter = CarroAdapter(this.carros) { onClickCarro(it) }
 
                 // enviar notificação
-                enviaNotificacao(this.carros.get(0))
+                if(this.carros.size > 0) {
+                    enviaNotificacao(this.carros.get(0))
+                }
             }
         }.start()
 
@@ -171,7 +173,7 @@ class TelaInicial : DebugActivity(), NavigationView.OnNavigationItemSelectedList
             Toast.makeText(context, "Botão de atualizar", Toast.LENGTH_LONG).show()
         } else if (id == R.id.action_config) {
             Toast.makeText(context, "Botão de configuracoes", Toast.LENGTH_LONG).show()
-        } else if (id == R.id.action_buscar) {
+        } else if (id == R.id.action_adicionar) {
             // iniciar activity de cadastro
             val intent = Intent(context, CarroCadastroActivity::class.java)
             intent.putExtra("numero", carros.size)

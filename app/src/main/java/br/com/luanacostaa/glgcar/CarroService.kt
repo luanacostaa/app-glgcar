@@ -18,12 +18,12 @@ object CarroService {
     fun getCarros (context: Context): List<Carro> {
         var carros = ArrayList<Carro>()
         if (AndroidUtils.isInternetDisponivel(context)) {
-            val url = "$host/carro"
+            val url = "$host/car"
             val json = HttpHelper.get(url)
             carros = parserJson(json)
             // salvar offline
-            for (d in carros) {
-                saveOffline(d)
+            for (c in carros) {
+                saveOffline(c)
             }
             return carros
         } else {
@@ -36,7 +36,7 @@ object CarroService {
     fun getCarro (context: Context, _id: String, code: Long): Carro? {
 
         if (AndroidUtils.isInternetDisponivel(context)) {
-            val url = "$host/carro/${_id}"
+            val url = "$host/car/${_id}"
             val json = HttpHelper.get(url)
             val carro = parserJson<Carro>(json)
 
@@ -49,7 +49,7 @@ object CarroService {
     }
 
     fun save(carro: Carro): Response {
-        val json = HttpHelper.post("$host/carro", carro.toJson())
+        val json = HttpHelper.post("$host/car", carro.toJson())
         return parserJson(json)
     }
 
